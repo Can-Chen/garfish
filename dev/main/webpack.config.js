@@ -11,26 +11,24 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: '//localhost:2333/',
-    globalObject: 'window',
-    jsonpFunction: 'main-jsonp-function',
+    path: path.join(__dirname, 'dist'),
   },
 
   devServer: {
     open: true,
     port: '2333',
     compress: true,
-    disableHostCheck: true,
     historyApiFallback: true,
-    clientLogLevel: 'warning',
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
-    overlay: {
-      errors: true,
-      warnings: false,
+    client: {
+      logging: 'warn',
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
     },
   },
 

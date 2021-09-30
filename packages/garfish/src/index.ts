@@ -1,4 +1,4 @@
-import { Garfish } from '@garfish/core';
+import Garfish from '@garfish/core';
 import { GarfishRouter } from '@garfish/router';
 import { GarfishBrowserVm } from '@garfish/browser-vm';
 import { GarfishBrowserSnapshot } from '@garfish/browser-snapshot';
@@ -71,5 +71,5 @@ export function createContext(): Garfish {
 }
 
 export type { interfaces } from '@garfish/core';
-export { Garfish } from '@garfish/core';
+export { default as Garfish } from '@garfish/core';
 export default createContext();

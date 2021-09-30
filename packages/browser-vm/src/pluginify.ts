@@ -4,7 +4,7 @@ import { Module } from './types';
 import { Sandbox } from './sandbox';
 
 declare module '@garfish/core' {
-  export interface Garfish {
+  export default interface Garfish {
     getGlobalObject: () => Window & typeof globalThis;
     setGlobalValue(key: string, value?: any): void;
     clearEscapeEffect: (key: string, value?: any) => void;
